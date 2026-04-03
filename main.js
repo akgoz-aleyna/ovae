@@ -1,59 +1,57 @@
-// OVAÉ — Main JS
+// OVAÉ — main.js
 
-// NAV scroll behavior
+// NAV solid on scroll
 const nav = document.getElementById('nav');
-const burger = document.getElementById('burger');
-const navLinks = document.querySelector('.nav-links');
-
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  nav.classList.toggle('solid', window.scrollY > 60);
 }, { passive: true });
 
-// Mobile menu
+// Mobile burger
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
 });
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    document.body.style.overflow = '';
+  });
 });
 
 // Scroll reveal
-const revealEls = document.querySelectorAll(
-  'section > .container > *, .about-grid, .about-pillars, .pillar, ' +
-  '.problems-grid, .problem-card, .swot-card, .persona-card, ' +
-  '.evp-item, .plan-quarter, .brand-block, .solution-banner'
-);
-
-revealEls.forEach(el => el.setAttribute('data-reveal', ''));
-
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      observer.unobserve(entry.target);
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
 
-document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+// Mark elements for reveal
+const targets = [
+  '.about-text > *',
+  '.about-card-float',
+  '.section-header > *',
+  '.product-card',
+  '.benefit-item',
+  '.benefits-left > *',
+  '.article-meta > *',
+  '.article-title',
+  '.article-lead',
+  '.article-content > *',
+  '.contact-logo',
+  '#contact h2',
+  '#contact p',
+  '.btn-primary.large',
+].join(',');
 
-// Smooth active nav link highlight
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 120) {
-      current = section.getAttribute('id');
-    }
-  });
-  navAnchors.forEach(a => {
-    a.style.opacity = a.getAttribute('href') === `#${current}` ? '1' : '';
-    a.style.fontWeight = a.getAttribute('href') === `#${current}` ? '500' : '';
-  });
-}, { passive: true });
+document.querySelectorAll(targets).forEach((el, i) => {
+  el.setAttribute('data-r', '');
+  if (i % 4 === 1) el.setAttribute('data-delay', '1');
+  else if (i % 4 === 2) el.setAttribute('data-delay', '2');
+  else if (i % 4 === 3) el.setAttribute('data-delay', '3');
+  observer.observe(el);
+});

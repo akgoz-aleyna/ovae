@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OVAÉ — The Essential That Transforms</title>
+  <link rel="icon" type="image/png" href="logo.PNG" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,451 +15,315 @@
   <!-- NAV -->
   <nav id="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <img src="logo.PNG" alt="OVAÉ" />
+      <a href="#hero" class="nav-logo-link">
+        <img src="logo.PNG" alt="OVAÉ" class="nav-logo-img" />
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">À propos</a></li>
-        <li><a href="#philosophy">Philosophie</a></li>
-        <li><a href="#swot">Stratégie</a></li>
-        <li><a href="#personas">Personas</a></li>
-        <li><a href="#evp">Équipe</a></li>
-        <li><a href="#recruitment">Recrutement</a></li>
+        <li><a href="#products">Produits</a></li>
+        <li><a href="#benefits">Philosophie</a></li>
+        <li><a href="#article">Expert</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
+    <div class="hero-bg"></div>
     <div class="hero-content">
-      <img src="logo.PNG" alt="OVAÉ Logo" class="hero-logo" />
-      <h1 class="hero-title">OVAÉ</h1>
-      <p class="hero-tagline">THE ESSENTIAL THAT TRANSFORMS</p>
-      <p class="hero-authors">Aleyna Akgoz &nbsp;/&nbsp; Imene Benguesmia &nbsp;/&nbsp; Soureya Daher &nbsp;/&nbsp; Amine Snani</p>
-      <a href="#about" class="btn-outline">Découvrir</a>
+      <p class="hero-eyebrow">Clean Beauty · Densité Active</p>
+      <h1>
+        <span class="hero-line">The Essential</span>
+        <span class="hero-line italic">That Transforms</span>
+      </h1>
+      <p class="hero-sub">Formules ultra-propres. Maximum 5 ingrédients actifs.<br />Zéro compromis, zéro plastique.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Découvrir nos soins</a>
+        <a href="#about" class="btn-ghost">Notre histoire</a>
+      </div>
     </div>
-    <div class="hero-scroll-indicator">
-      <span></span>
+    <div class="hero-bottom">
+      <span class="hero-scroll">Défiler</span>
+      <div class="hero-line-v"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="container">
-      <div class="section-label">About us</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Une beauté sans<br /><em>surcharge</em></h2>
-          <p>OVAÉ propose une approche du soin de la peau basée sur l'efficacité essentielle. Notre gamme simplifiée garantit une peau saine et équilibrée grâce à des formules ultra-propres.</p>
-          <p>OVAÉ est la promesse d'une beauté sans surcharge : <strong>efficacité maximale, transparence totale</strong> et impact environnemental minimal — packaging rechargeable, zéro plastique.</p>
+    <div class="about-split">
+      <div class="about-visual">
+        <div class="about-orb"></div>
+        <div class="about-card-float">
+          <span class="float-number">5</span>
+          <span class="float-label">ingrédients actifs<br />maximum</span>
         </div>
-        <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-icon">◯</div>
-            <h3>Efficacité Maximale</h3>
-            <p>Maximum 5 ingrédients actifs de très haute qualité. Chaque goutte compte.</p>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">À propos</p>
+        <h2>Une beauté<br /><em>sans surcharge</em></h2>
+        <p class="lead">OVAÉ propose une approche du soin de la peau basée sur l'efficacité essentielle.</p>
+        <p>Notre gamme simplifiée garantit une peau saine et équilibrée grâce à des formules ultra-propres. OVAÉ est la promesse d'une beauté sans surcharge : efficacité maximale, transparence totale et impact environnemental minimal.</p>
+        <p>Chaque produit est formulé avec un maximum de 5 ingrédients actifs soigneusement sélectionnés. Pas de parfums inutiles, pas de conservateurs agressifs — uniquement ce dont votre peau a besoin.</p>
+        <div class="about-values">
+          <div class="value-tag">Packaging rechargeable</div>
+          <div class="value-tag">Zéro plastique</div>
+          <div class="value-tag">Formule transparente</div>
+          <div class="value-tag">Verre ambré réutilisable</div>
+        </div>
+        <div class="about-team">
+          <p class="team-label">Fondé par</p>
+          <p class="team-names">Aleyna Akgoz · Imene Benguesmia<br />Soureya Daher · Amine Snani</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Nos produits</p>
+        <h2>La gamme<br /><em>essentielle</em></h2>
+        <p class="section-desc">Chaque soin est conçu autour d'une formule courte, concentrée et efficace. Contenants en verre ambré rechargeable.</p>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card" data-index="01">
+          <div class="product-visual">
+            <div class="product-orb orb-1"></div>
+            <div class="product-bottle">
+              <div class="bottle-body"></div>
+              <div class="bottle-cap"></div>
+              <span class="bottle-label">SÉRUM<br />VISAGE</span>
+            </div>
           </div>
-          <div class="pillar">
-            <div class="pillar-icon">◎</div>
-            <h3>Transparence Totale</h3>
-            <p>Formules courtes et lisibles. Pas de "bruit chimique" inutile.</p>
+          <div class="product-info">
+            <span class="product-index">01</span>
+            <h3>Sérum Visage<br />Densité Active</h3>
+            <p>Notre sérum phare. 5 actifs concentrés pour hydrater, illuminer et renforcer la barrière cutanée en une seule application.</p>
+            <div class="product-actifs">
+              <span class="actif-tag">Acide hyaluronique</span>
+              <span class="actif-tag">Niacinamide</span>
+              <span class="actif-tag">Squalane</span>
+              <span class="actif-tag">Panthénol</span>
+              <span class="actif-tag">Allantoïne</span>
+            </div>
+            <a href="#contact" class="product-btn">En savoir plus</a>
           </div>
-          <div class="pillar">
-            <div class="pillar-icon">⬡</div>
-            <h3>Impact Minimal</h3>
-            <p>Packaging rechargeable en verre ambré. Zéro plastique.</p>
+        </div>
+
+        <div class="product-card" data-index="02">
+          <div class="product-visual">
+            <div class="product-orb orb-2"></div>
+            <div class="product-bottle bottle-wide">
+              <div class="bottle-body"></div>
+              <div class="bottle-cap cap-wide"></div>
+              <span class="bottle-label">CRÈME<br />HYDRATANTE</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-index">02</span>
+            <h3>Crème Hydratante<br />Essentielle</h3>
+            <p>Texture légère fondante. Hydratation longue durée sans occlusion. Idéale pour toutes les peaux, même les plus sensibles.</p>
+            <div class="product-actifs">
+              <span class="actif-tag">Beurre de karité</span>
+              <span class="actif-tag">Céramides</span>
+              <span class="actif-tag">Aloe vera</span>
+              <span class="actif-tag">Glycérine</span>
+              <span class="actif-tag">Bisabolol</span>
+            </div>
+            <a href="#contact" class="product-btn">En savoir plus</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-index="03">
+          <div class="product-visual">
+            <div class="product-orb orb-3"></div>
+            <div class="product-bottle bottle-tall">
+              <div class="bottle-body"></div>
+              <div class="bottle-cap cap-pump"></div>
+              <span class="bottle-label">GEL<br />NETTOYANT</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-index">03</span>
+            <h3>Gel Nettoyant<br />Douceur Pure</h3>
+            <p>Un nettoyage en douceur qui préserve le microbiome cutané. Formule sans sulfates, sans perturbateurs de la barrière.</p>
+            <div class="product-actifs">
+              <span class="actif-tag">Glucoside de coco</span>
+              <span class="actif-tag">Bêta-glucane</span>
+              <span class="actif-tag">Huile de jojoba</span>
+              <span class="actif-tag">Extrait de camomille</span>
+              <span class="actif-tag">Acide lactique</span>
+            </div>
+            <a href="#contact" class="product-btn">En savoir plus</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-index="04">
+          <div class="product-visual">
+            <div class="product-orb orb-4"></div>
+            <div class="product-bottle bottle-dropper">
+              <div class="bottle-body"></div>
+              <div class="bottle-cap cap-dropper"></div>
+              <span class="bottle-label">HUILE<br />PURIFIANTE</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-index">04</span>
+            <h3>Huile Purifiante<br />Équilibre Actif</h3>
+            <p>Un concentré d'huiles précieuses pour rééquilibrer les peaux mixtes à grasses. Texture sèche, absorption rapide.</p>
+            <div class="product-actifs">
+              <span class="actif-tag">Huile de jojoba</span>
+              <span class="actif-tag">Rétinol végétal</span>
+              <span class="actif-tag">Zinc</span>
+              <span class="actif-tag">Extrait de thé vert</span>
+              <span class="actif-tag">Acide azélaïque</span>
+            </div>
+            <a href="#contact" class="product-btn">En savoir plus</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="benefits-inner">
+      <div class="benefits-left">
+        <p class="section-eyebrow light">Philosophie</p>
+        <h2 class="light">Pourquoi<br /><em>moins c'est plus</em></h2>
+        <p class="light-desc">OVAÉ offre une efficacité maximale garantie par un maximum de 5 ingrédients actifs, tout en garantissant un engagement zéro plastique et rechargeable pour une beauté experte et sans compromis.</p>
+        <a href="#article" class="btn-outline-w">Lire l'avis de notre dermatologue</a>
+      </div>
+      <div class="benefits-right">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/><path d="M20 10v10l6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="benefit-text">
+            <h4>Efficacité maximale</h4>
+            <p>Chaque actif est sélectionné pour sa concentration et sa compatibilité. Moins d'ingrédients = plus de place pour ce qui compte.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L36 36 H4 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="20" y1="16" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="30" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <div class="benefit-text">
+            <h4>Zéro bruit chimique</h4>
+            <p>Nous refusons les parfums synthétiques, les conservateurs agressifs et les charges inutiles qui perturbent la barrière cutanée.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 6 C12 6 6 12 6 20 C6 28 12 34 20 34 C28 34 34 28 34 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M28 6 L34 12 L28 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="benefit-text">
+            <h4>Circuit rechargeable</h4>
+            <p>Flacons en verre ambré réutilisables. Retournez votre contenant vide pour le faire désinfecter et recharger — zéro déchet.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M14 20 L18 24 L26 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="benefit-text">
+            <h4>Transparence totale</h4>
+            <p>La liste complète de nos ingrédients est accessible et expliquée. Vous savez exactement ce que vous appliquez sur votre peau.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BRAND IDENTITY -->
-  <section id="brand">
+  <!-- ARTICLE DERMATOLOGUE -->
+  <section id="article">
     <div class="container">
-      <div class="section-label">La marque</div>
-      <h2 class="section-title">Identité visuelle</h2>
-      <div class="brand-grid">
-        <div class="brand-block">
-          <h4>Couleurs</h4>
-          <div class="palette">
-            <div class="swatch" style="background:#5c2018;" title="#5c2018"><span>Bourgogne</span></div>
-            <div class="swatch" style="background:#6f4e37;" title="#6f4e37"><span>Café</span></div>
-            <div class="swatch" style="background:#d9c6b3;" title="#d9c6b3"><span>Beige</span></div>
-            <div class="swatch" style="background:#575654;" title="#575654"><span>Ardoise</span></div>
-            <div class="swatch" style="background:#fcfaf9; border:1px solid #d9c6b3;" title="#fcfaf9"><span>Crème</span></div>
-            <div class="swatch" style="background:#1a1a1a;" title="#1a1a1a"><span>Nuit</span></div>
-          </div>
-        </div>
-        <div class="brand-block">
-          <h4>Typographie</h4>
-          <div class="typo-sample">
-            <p class="typo-title">HK Grotesk</p>
-            <p class="typo-body">Titres &amp; logo — élégance intemporelle</p>
-            <p class="typo-body-sm">Corps de texte — sans-serif douce, accessible</p>
-          </div>
-        </div>
-        <div class="brand-block">
-          <h4>Style visuel</h4>
-          <p>Atmosphère chaleureuse, lumineuse et minimaliste. Photographie axée sur les textures des produits, les ingrédients (huile, argile, pétales) et les contenants en verre réutilisable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHILOSOPHY -->
-  <section id="philosophy">
-    <div class="container">
-      <div class="section-label">Philosophie</div>
-      <h2 class="section-title">Pourquoi notre Peau dit<br /><em>STOP à la Surcharge</em></h2>
-      <div class="philosophy-intro">
-        <p>L'industrie nous pousse à l'empilement d'ingrédients. Or, <strong>la surcharge chimique est le problème, pas la solution.</strong></p>
-      </div>
-      <div class="problems-grid">
-        <div class="problem-card">
-          <div class="problem-number">01</div>
-          <h3>La Réaction en Chaîne</h3>
-          <p>Plus de substances (parfums, conservateurs) augmentent le risque d'hypersensibilité et de rougeurs inexpliquées.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-number">02</div>
-          <h3>L'Efficacité Bloquée</h3>
-          <p>Des actifs puissants peuvent se neutraliser entre eux, transformant vos investissements en performance diluée.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-number">03</div>
-          <h3>Le Burnout Cellulaire</h3>
-          <p>Saturée, la peau ne peut plus assurer ses fonctions naturelles (barrière, hydratation) et s'épuise.</p>
-        </div>
-      </div>
-      <div class="solution-banner">
-        <div class="solution-content">
-          <h3>La Réponse OVAÉ : La Densité Active</h3>
-          <p>La science est claire : pour l'équilibre cutané, il suffit d'une poignée d'ingrédients de très haute qualité. Notre engagement est total : <strong>un maximum de 5 ingrédients actifs.</strong> Nous avons le courage de retirer tout le "bruit chimique" inutile.</p>
-          <blockquote>Exiger la simplicité, c'est exiger la performance et le respect de votre peau.</blockquote>
-        </div>
-        <div class="solution-number">5</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SWOT -->
-  <section id="swot">
-    <div class="container">
-      <div class="section-label">La concurrence</div>
-      <h2 class="section-title">Analyse SWOT</h2>
-      <div class="swot-grid">
-        <div class="swot-card swot-forces">
-          <div class="swot-header">
-            <span class="swot-letter">S</span>
-            <h3>Forces</h3>
-          </div>
-          <ul>
-            <li><strong>Formulation "Less is More"</strong> — Réduit les risques d'irritation, maximise la transparence.</li>
-            <li><strong>Éco-responsabilité</strong> — Emballages rechargeables et zéro plastique.</li>
-            <li><strong>Nom de Marque (OVAÉ)</strong> — Court, mémorable, élégant.</li>
-          </ul>
-        </div>
-        <div class="swot-card swot-faiblesses">
-          <div class="swot-header">
-            <span class="swot-letter">W</span>
-            <h3>Faiblesses</h3>
-          </div>
-          <ul>
-            <li><strong>Éducation Client</strong> — Nécessité d'expliquer l'efficacité d'une formule courte.</li>
-            <li><strong>Gamme Limitée</strong> — Moins d'options pour les routines très spécialisées.</li>
-          </ul>
-        </div>
-        <div class="swot-card swot-opportunites">
-          <div class="swot-header">
-            <span class="swot-letter">O</span>
-            <h3>Opportunités</h3>
-          </div>
-          <ul>
-            <li><strong>Tendance au "Skinimalisme"</strong> — Forte demande pour simplifier les routines.</li>
-            <li><strong>Demande Éthique</strong> — Attrait pour le clean beauty et la durabilité.</li>
-          </ul>
-        </div>
-        <div class="swot-card swot-menaces">
-          <div class="swot-header">
-            <span class="swot-letter">T</span>
-            <h3>Menaces</h3>
-          </div>
-          <ul>
-            <li><strong>Greenwashing Concurrentiel</strong> — Nombreuses marques se positionnant comme "clean".</li>
-            <li><strong>Coût Élevé</strong> — Le sourcing éthique et la qualité des actifs renchérissent le prix.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PERSONAS -->
-  <section id="personas">
-    <div class="container">
-      <div class="section-label">Nos clients</div>
-      <h2 class="section-title">Personas</h2>
-      <div class="personas-grid">
-
-        <div class="persona-card">
-          <div class="persona-header">
-            <div class="persona-avatar">CG</div>
+      <div class="article-wrapper">
+        <div class="article-meta">
+          <p class="section-eyebrow">Expert</p>
+          <div class="article-author">
+            <div class="author-avatar">CL</div>
             <div>
-              <h3 class="persona-name">Carla Gallego</h3>
-              <p class="persona-meta">38 ans &nbsp;·&nbsp; Paris &nbsp;·&nbsp; Responsable Marketing</p>
+              <p class="author-name">Dr. Camille Laurent</p>
+              <p class="author-title">Dermatologue &amp; experte en physiologie cutanée</p>
             </div>
           </div>
-          <blockquote class="persona-quote">"Je veux une routine qui fonctionne, qui soit bonne pour moi, et qui ne me force pas à acheter dix flacons inutiles."</blockquote>
-          <div class="persona-details">
-            <div class="persona-col">
-              <h4>Goals</h4>
-              <ul>
-                <li>Peau apaisée et éclatante sans réaction</li>
-                <li>Routine de soin en moins de 5 minutes</li>
-                <li>Cohérence éthique — marques éco-responsables</li>
-              </ul>
-            </div>
-            <div class="persona-col">
-              <h4>Pain Points</h4>
-              <ul>
-                <li>Irritation / Rougeurs</li>
-                <li>Sentiment de gaspillage</li>
-                <li>Confusion sur les actifs compatibles</li>
-              </ul>
-            </div>
-          </div>
-          <div class="persona-info">
-            <span>Master's Degree</span>
-            <span>4 500 €/mois</span>
-            <span>Mariée</span>
-            <span>Instagram &amp; Pinterest</span>
-          </div>
-          <div class="persona-motivation">
-            <strong>Motivation d'achat :</strong> La simplicité et la sécurité de la formule.
+          <div class="article-toc">
+            <p class="toc-label">Dans cet article</p>
+            <ul>
+              <li><a href="#article">La surcharge chimique</a></li>
+              <li><a href="#article">Les 3 effets négatifs</a></li>
+              <li><a href="#article">La solution minimaliste</a></li>
+            </ul>
           </div>
         </div>
+        <div class="article-content">
+          <h2 class="article-title">Pourquoi la peau réagit mal à la surcharge cosmétique</h2>
+          <p class="article-lead">Au fil des années, les routines de soin se sont considérablement complexifiées. Entre sérums, crèmes, actifs ciblés et traitements spécifiques, il est devenu courant d'utiliser plusieurs produits au quotidien. Cette évolution soulève une question essentielle : la multiplication des soins est-elle réellement bénéfique pour la peau&nbsp;?</p>
 
-        <div class="persona-card">
-          <div class="persona-header">
-            <div class="persona-avatar">MD</div>
+          <p>L'industrie cosmétique a longtemps encouragé l'idée qu'à chaque problème correspond un produit. Cette logique a conduit à des routines parfois très chargées, pouvant inclure six à dix produits différents. Pourtant, la peau est un organe vivant qui possède ses propres mécanismes de régulation. Lorsqu'elle est exposée à une trop grande quantité de substances, ces mécanismes peuvent être perturbés.</p>
+
+          <div class="article-pullquote">
+            <blockquote>La peau est un organe vivant qui possède ses propres mécanismes de régulation. La surcharge les perturbe.</blockquote>
+          </div>
+
+          <h3>L'augmentation des réactions cutanées</h3>
+          <p>L'un des premiers effets de cette surcharge est l'augmentation des réactions cutanées. L'accumulation d'ingrédients — notamment les parfums, les conservateurs ou certains actifs puissants — peut provoquer des irritations, des rougeurs ou une hypersensibilité. Une peau sur-sollicitée devient souvent plus réactive, même face à des produits habituellement bien tolérés.</p>
+
+          <h3>L'interaction entre les actifs</h3>
+          <p>Par ailleurs, l'association de plusieurs actifs n'est pas toujours sans conséquence. Certains ingrédients peuvent interagir entre eux, réduisant leur efficacité ou augmentant leur agressivité. Dans certains cas, ils peuvent même se neutraliser, rendant la routine moins performante qu'attendu.</p>
+
+          <h3>La fragilisation de la barrière cutanée</h3>
+          <p>La surcharge cosmétique peut également fragiliser la barrière cutanée. Cette barrière joue un rôle essentiel en protégeant la peau et en maintenant son hydratation. Lorsqu'elle est altérée, la peau perd plus facilement en eau, devient plus sensible et moins résistante face aux agressions extérieures.</p>
+
+          <div class="article-highlight">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
             <div>
-              <h3 class="persona-name">Mehdi Dayer</h3>
-              <p class="persona-meta">27 ans &nbsp;·&nbsp; Lyon &nbsp;·&nbsp; Assistant IT</p>
+              <h4>Le minimalisme cosmétique</h4>
+              <p>Face à ces constats, une nouvelle approche s'impose progressivement : le <strong>skin minimalism</strong>. Cette tendance consiste à réduire le nombre de produits utilisés et à privilégier des soins mieux ciblés, formulés avec des ingrédients pertinents et bien tolérés.</p>
             </div>
           </div>
-          <blockquote class="persona-quote">"Je paie pour la qualité et l'impact, pas pour un joli flacon que je jetterai dans trois mois."</blockquote>
-          <div class="persona-details">
-            <div class="persona-col">
-              <h4>Goals</h4>
-              <ul>
-                <li>Produits multi-fonctions et fiables</li>
-                <li>Éviter les ingrédients controversés</li>
-                <li>Durabilité avant tout</li>
-              </ul>
-            </div>
-            <div class="persona-col">
-              <h4>Pain Points</h4>
-              <ul>
-                <li>Le plastique</li>
-                <li>Manque de transparence</li>
-              </ul>
-            </div>
-          </div>
-          <div class="persona-info">
-            <span>Bachelor's Degree</span>
-            <span>2 200 €/mois</span>
-            <span>Célibataire</span>
-            <span>Newsletters &amp; Blogs</span>
-          </div>
-          <div class="persona-motivation">
-            <strong>Motivation d'achat :</strong> L'éthique de la marque et la fiabilité du produit.
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
+          <h3>La qualité avant la quantité</h3>
+          <p>Aujourd'hui, de nombreux experts s'accordent sur l'importance de privilégier la qualité à la quantité. Une routine simple, cohérente et adaptée aux besoins réels de la peau peut s'avérer plus efficace qu'une accumulation de produits.</p>
+          <p>En définitive, la cosmétique évolue vers une approche plus équilibrée, centrée sur la compréhension de la peau. Simplifier sa routine ne signifie pas renoncer à l'efficacité, mais au contraire chercher à préserver durablement la santé cutanée.</p>
 
-  <!-- EVP -->
-  <section id="evp">
-    <div class="container">
-      <div class="section-label">Notre EVP</div>
-      <h2 class="section-title">Pourquoi rejoindre<br /><em>OVAÉ ?</em></h2>
-      <div class="evp-content">
-        <div class="evp-statement">
-          <p>OVAÉ offre une carrière enrichissante et transparente au service d'une mission écologique et scientifique concrète, où l'expertise est valorisée pour simplifier l'industrie et créer un impact durable.</p>
-        </div>
-        <div class="evp-grid">
-          <div class="evp-item">
-            <div class="evp-icon">◐</div>
-            <h4>Mission avec sens</h4>
-            <p>Participer activement à la réduction de l'impact écologique de la beauté.</p>
-          </div>
-          <div class="evp-item">
-            <div class="evp-icon">◑</div>
-            <h4>Expertise valorisée</h4>
-            <p>Un environnement où la science et la transparence priment sur le marketing vide.</p>
-          </div>
-          <div class="evp-item">
-            <div class="evp-icon">◒</div>
-            <h4>Impact mesurable</h4>
-            <p>Des résultats concrets : tonnes de plastique évitées, flacons réutilisés.</p>
-          </div>
-          <div class="evp-item">
-            <div class="evp-icon">◓</div>
-            <h4>Culture transparente</h4>
-            <p>Une communication interne basée sur la transparence et le savoir scientifique.</p>
+          <div class="article-signature">
+            <div class="signature-line"></div>
+            <p><strong>Dr. Camille Laurent</strong><br />Dermatologue &amp; experte en physiologie cutanée</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMMUNICATION PLAN -->
-  <section id="complan">
-    <div class="container">
-      <div class="section-label">Communication Interne</div>
-      <h2 class="section-title">Planning annuel</h2>
-      <p class="section-subtitle">La communication interne d'OVAÉ doit être basée sur la transparence, l'expertise scientifique et l'engagement durable.</p>
-      <div class="plan-timeline">
-
-        <div class="plan-quarter">
-          <div class="quarter-label">Q1</div>
-          <div class="quarter-content">
-            <h3>"Le Manifeste OVAÉ : 5 Ingrédients, 0 Compromis"</h3>
-            <p class="quarter-goal">Assurer l'adhésion totale à la proposition de valeur et aux valeurs éthiques.</p>
-            <ul>
-              <li><strong>Mois 1 :</strong> Séminaire d'Intégration du Manifeste</li>
-              <li><strong>Mois 2 :</strong> Formation Actifs Clés — maîtriser la preuve par 5</li>
-              <li><strong>Mois 3 :</strong> Atelier Éthique — comprendre le sourcing des 5 actifs principaux</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="plan-quarter">
-          <div class="quarter-label">Q2</div>
-          <div class="quarter-content">
-            <h3>"Ambassadeurs de la Circularité & Feedback Loop"</h3>
-            <p class="quarter-goal">Maîtriser le système de recharge et centrer chaque service sur l'expérience client.</p>
-            <ul>
-              <li><strong>Mois 4 :</strong> Formation Logistique — cycle de vie du flacon en verre ambré</li>
-              <li><strong>Mois 5 :</strong> Atelier Pratique — gestion des objections client sur le prix</li>
-              <li><strong>Mois 6 :</strong> Revue des Personas — utiliser les retours clients</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="plan-quarter">
-          <div class="quarter-label">Q3</div>
-          <div class="quarter-content">
-            <h3>"Le Savoir qui nous Différencie : Du Labo au Blog"</h3>
-            <p class="quarter-goal">Positionner l'équipe comme experte en santé cutanée.</p>
-            <ul>
-              <li><strong>Mois 7 :</strong> Webinaire — le ton expert d'OVAÉ</li>
-              <li><strong>Mois 8 :</strong> Analyse Compétitive — identifier les ingrédients "bruits" refusés</li>
-              <li><strong>Mois 9 :</strong> Challenge "Simplifier pour Exécuter"</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="plan-quarter">
-          <div class="quarter-label">Q4</div>
-          <div class="quarter-content">
-            <h3>"Vers l'Avenir : Mesurer l'Impact et Innover"</h3>
-            <p class="quarter-goal">Planifier l'évolution des produits et célébrer les réalisations de l'année.</p>
-            <ul>
-              <li><strong>Mois 10 :</strong> Brainstorming R&amp;D — les 5 prochaines solutions actives</li>
-              <li><strong>Mois 11 :</strong> Audit Culturel — évaluation de la clarté des processus internes</li>
-              <li><strong>Mois 12 :</strong> Célébration de l'Impact — chiffres annuels partagés</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- RECRUITMENT -->
-  <section id="recruitment">
-    <div class="container">
-      <div class="section-label">Recrutement</div>
-      <h2 class="section-title">Rejoignez<br /><em>la révolution</em></h2>
-
-      <div class="recruit-intro">
-        <div class="recruit-evp-persona">
-          <div class="evp-persona-avatar">EM</div>
-          <div class="evp-persona-text">
-            <h4>Élise Ménard — Profil type</h4>
-            <p>32 ans &nbsp;·&nbsp; Lyon &nbsp;·&nbsp; Commerciale B2B Clean Beauty</p>
-            <blockquote>"Je veux représenter une marque qui prouve qu'on peut faire mieux avec moins. Si je vends quelque chose, c'est parce que j'y crois vraiment."</blockquote>
-          </div>
-        </div>
-      </div>
-
-      <div class="job-offer">
-        <div class="job-header">
-          <span class="job-tag">Offre ouverte</span>
-          <h3>Commercial(e) Stratégique (H/F)</h3>
-          <p class="job-location">Île-de-France &amp; régions</p>
-        </div>
-
-        <div class="job-content">
-          <div class="job-mission">
-            <h4>Votre mission</h4>
-            <ul>
-              <li>Développer et fidéliser un portefeuille de partenaires premium (pharmacies sélectives, concept stores)</li>
-              <li>Convaincre que notre formule courte est une preuve de performance supérieure</li>
-              <li>Former nos partenaires à la philosophie de la Densité Active d'OVAÉ</li>
-            </ul>
-          </div>
-          <div class="job-profile">
-            <h4>Vous êtes la bonne personne si…</h4>
-            <ul>
-              <li>Expérience significative (min. 3 ans) en B2B cosmétique / pharmacie / éco-responsable</li>
-              <li>Forte capacité à défendre un argumentaire scientifique pointu</li>
-              <li>Adhésion sincère aux principes de l'économie circulaire</li>
-              <li>Excellentes qualités de communication et de pédagogie</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="job-challenge">
-          <h4>Le Challenge Recrutement</h4>
-          <p>Nous maintenons le format du street marketing pour tester la capacité du commercial à vendre l'expertise et la qualité concentrée d'un soin visage haut de gamme.</p>
-          <div class="challenge-badge">
-            <span class="challenge-time">1H</span>
-            <span class="challenge-text">TOP CHRONO — Convaincre le plus de passants &bull; Vendre notre Sérum Visage</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- CONTACT / FOOTER -->
   <section id="contact">
-    <div class="container">
-      <div class="contact-inner">
+    <div class="contact-wrap">
+      <div class="contact-content">
         <img src="logo.PNG" alt="OVAÉ" class="contact-logo" />
-        <h2>Simple. Efficace.<br /><em>Transformant.</em></h2>
+        <h2>Simple.<br /><em>Efficace.</em><br />Transformant.</h2>
         <p>Comme nos produits.</p>
-        <div class="contact-links">
-          <a href="mailto:contact@ovae.com" class="btn-primary">contact@ovae.com</a>
-          <a href="https://www.ovae.com/careers" class="btn-outline-light">Nos opportunités</a>
-        </div>
-        <p class="contact-website">www.ovae.com</p>
+        <a href="mailto:contact@ovae.com" class="btn-primary large">contact@ovae.com</a>
+        <p class="contact-site">www.ovae.com</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>© 2024 OVAÉ — Aleyna Akgoz / Imene Benguesmia / Soureya Daher / Amine Snani</p>
+    <div class="footer-inner">
+      <span>© 2024 OVAÉ</span>
+      <span>Aleyna Akgoz · Imene Benguesmia · Soureya Daher · Amine Snani</span>
+      <span>www.ovae.com</span>
     </div>
   </footer>
 
