@@ -125,7 +125,7 @@ ul { list-style: none; }
 }
 .nav-logo-img {
   height: 34px; width: auto;
-  filter: brightness(0) invert(1);
+  filter: invert(1);
   transition: filter 0.4s;
 }
 #nav.solid .nav-logo-img { filter: none; }
