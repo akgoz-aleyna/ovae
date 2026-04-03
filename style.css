@@ -123,12 +123,22 @@ ul { list-style: none; }
   max-width: 1160px; margin: 0 auto; padding: 0 40px;
   display: flex; align-items: center; justify-content: space-between;
 }
+/* Nav logo: texte sur fond sombre, image sur fond clair */
+.nav-logo-text {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--cream);
+  display: block;
+}
 .nav-logo-img {
   height: 34px; width: auto;
-  filter: invert(1);
-  transition: filter 0.4s;
+  display: none;
+  transition: opacity 0.4s;
 }
-#nav.solid .nav-logo-img { filter: none; }
+#nav.solid .nav-logo-text { display: none; }
+#nav.solid .nav-logo-img { display: block; }
 
 .nav-links {
   display: flex; align-items: center; gap: 36px;
@@ -182,21 +192,28 @@ ul { list-style: none; }
   position: relative;
   min-height: 100vh;
   display: flex; flex-direction: column;
-  justify-content: center;
   background: var(--night);
   overflow: hidden;
-  padding: 0 40px;
 }
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 65% 35%, rgba(92,32,24,0.55) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 15% 75%, rgba(111,78,55,0.25) 0%, transparent 55%);
+    radial-gradient(ellipse 60% 70% at 30% 50%, rgba(92,32,24,0.5) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(111,78,55,0.2) 0%, transparent 55%);
   pointer-events: none;
 }
-.hero-content {
+
+/* Hero two-column grid */
+.hero-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 420px;
   position: relative; z-index: 1;
-  max-width: 760px;
+}
+
+.hero-content {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 120px 80px 80px 80px;
   animation: fadeUp 1.2s var(--ease) both;
 }
 .hero-eyebrow {
@@ -205,19 +222,50 @@ ul { list-style: none; }
   color: var(--beige); margin-bottom: 28px;
 }
 .hero-content h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 300; color: var(--cream);
   margin-bottom: 28px; line-height: 1.05;
 }
 .hero-line { display: block; }
 .hero-line.italic { font-style: italic; color: rgba(252,250,249,0.65); }
 .hero-sub {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   color: rgba(217,198,179,0.75);
   font-weight: 300; margin-bottom: 48px;
-  max-width: 460px; line-height: 1.8;
+  max-width: 420px; line-height: 1.8;
 }
 .hero-actions { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+
+/* Right logo panel */
+.hero-logo-panel {
+  display: flex; align-items: center; justify-content: center;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  padding: 80px 48px;
+  animation: fadeUp 1.4s var(--ease) both;
+}
+.hero-logo-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+  background: var(--cream);
+  padding: 52px 44px;
+  width: 100%;
+  max-width: 300px;
+}
+.hero-logo-big {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+.hero-logo-label {
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--burg);
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
 
 .hero-bottom {
   position: absolute; bottom: 40px; left: 40px;
@@ -658,6 +706,13 @@ footer {
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-logo-panel {
+    border-left: none; border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 80px;
+  }
+  .hero-logo-wrap { flex-direction: row; max-width: 100%; gap: 32px; padding: 36px 40px; }
+  .hero-logo-big { max-width: 140px; }
   .about-split { grid-template-columns: 1fr; }
   .about-visual { min-height: 320px; }
   .about-text { padding: 72px 48px; }
@@ -682,6 +737,10 @@ footer {
   .nav-links.open .nav-cta { border-color: rgba(252,250,249,0.3) !important; }
 
   .hero-content h1 { font-size: clamp(2.8rem, 12vw, 4.5rem); }
+  .hero-content { padding: 100px 28px 48px; }
+  .hero-logo-panel { padding: 40px 28px; }
+  .hero-logo-wrap { padding: 28px 24px; }
+  .hero-logo-big { max-width: 100px; }
   .about-text { padding: 56px 28px; }
   .about-card-float { right: 28px; bottom: 28px; padding: 20px 24px; }
   .benefits-left, .benefits-right { padding: 56px 28px; }
